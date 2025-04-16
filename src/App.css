@@ -29,6 +29,7 @@ body {
 
 img {
   width: 100%;
+  border-radius: 10px;
 }
 
 .container {
@@ -151,6 +152,12 @@ hr{
   display: grid;
   grid-template-columns: repeat(1,1fr);
   grid-gap: 10px;
+}
+.no-data{
+  place-items: center;
+  grid-column: 1/-1;
+  
+  color:orange
 }
 
 .data-container{

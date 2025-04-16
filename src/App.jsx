@@ -109,7 +109,10 @@ const App = () => {
           </button>
         </div>
         <div className="grid-container">
-          {appointments.map(each => (
+          {appointments.length===0?(<div className="no-data">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.Ya4MRCW_R4hJbHpW6qfzgAHaFj%26pid%3DApi&f=1&ipt=224d00f94d2621039ba219b7a27bb804929c86d4388462b57a2e766d7788e5fd&ipo=images" alt="" />
+            <h1>Looks like you have no scheduled appointments. Create one now</h1>
+          </div>):(appointments.map(each => (
             <div className="data-container" key={each.id}>
               <div className="flex-container"><h1 className="appointment">{each.text}</h1>
                 <button onClick={() => handleStar(each.id)} className="star-icon"><img src={each.isStared ? "https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png" : 'https://assets.ccbp.in/frontend/react-js/appointments-app/star-img.png'} alt="star" /></button>
@@ -125,7 +128,7 @@ const App = () => {
               </div>
 
             </div>
-          ))}
+          )))}
         </div>
       </div>
     </div>
