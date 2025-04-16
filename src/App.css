@@ -1,0 +1,226 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 17px);
+  background: linear-gradient(to bottom, #8b5cf6, #fbc7d4);
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+.card-container {
+  width: 100%;
+  background-color: rgba(224, 255, 255, 0.812);
+  border-radius: 10px;
+  box-shadow: 8px 8px 20px rgba(224, 255, 255, 0.49),
+    inset 8px 8px 20px rgba(173, 216, 230, 0.41);
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px
+}
+
+.img-container {
+
+  width: 100%;
+}
+
+.input-container {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.heading-1 {
+  font-size: 28px;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.eTH0_0prcoB-AVKi8MDcPwHaFS%26pid%3DApi&f=1&ipt=f3266d79293d7adc0c2beabe53a22d94c1ba560154c5eda54cdc060eb37fa076&ipo=images");
+  /* the below bg-image please dont delete sanni */
+  /* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.6aq-M9TXEZuTGiRafUjwdwAAAA%26pid%3DApi&f=1&ipt=e1ded5be24464600b469058d069f37f0731157d31e61343a868f51269c582ebb&ipo=images"); this is cool one, done delete it */
+  background-clip: text;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  transition: 0.5s ease;
+}
+
+.heading-1:hover{
+  transform: scale(1.04);
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.UtYqwFVEqWHNlYxBM1IcOAHaE8%26pid%3DApi&f=1&ipt=be4e69884a9bb8af413eacd6966c2cb41df58bb1bbc007659d3ea635ce77ab35&ipo=images");
+}
+
+.input-wrapper {
+  position: relative;
+  margin: 10px 0px;
+}
+
+input {
+  outline: none;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 10px;
+  border-width: 0px;
+  font-size: 18px;
+  color: magenta;
+  font-weight: 600;
+  
+}
+
+label {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  pointer-events: none;
+  transition: 0.7s ease;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+input:focus+label,
+input:valid+label{
+  top:-10px;
+  background-color: white;
+  color:magenta
+}
+
+.add-btn{
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border-width: 0px;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(to right,dodgerblue,magenta);
+  color:white;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 1s ease;
+}
+.add-btn:hover{
+  transform: scale(1.05);
+  background: linear-gradient(to right,magenta,dodgerblue);
+}
+
+hr{
+  border:1px solid black;
+  margin: 15px 0px;
+}
+.flex-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.heading{
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.UtYqwFVEqWHNlYxBM1IcOAHaE8%26pid%3DApi&f=1&ipt=be4e69884a9bb8af413eacd6966c2cb41df58bb1bbc007659d3ea635ce77ab35&ipo=images");
+  font-size: 22px;
+}
+.heading:hover{
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.eTH0_0prcoB-AVKi8MDcPwHaFS%26pid%3DApi&f=1&ipt=f3266d79293d7adc0c2beabe53a22d94c1ba560154c5eda54cdc060eb37fa076&ipo=images");
+}
+
+.starred-btn{
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-gap: 10px;
+}
+
+.data-container{
+  background-color: skyblue;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 1s ease;
+}
+
+
+.data-container:hover{
+  transform: scale(1.04);
+  background-color: dodgerblue;
+}
+
+.star-icon{
+  background-color: transparent;
+  border-width: 0px;
+  cursor: pointer;
+  width:40px;
+  height: 40px;
+}
+.appointment{
+  font-size: 22px;
+  font-weight: 700;
+  margin: 4px 0px;
+  color: maroon;
+  max-width: 180px;
+  
+  
+}
+.date{
+  color:black;
+  font-size: 18px;
+  font-weight: 700;
+}
+.date:hover{
+  color:white
+}
+@media screen and (min-width:768px) {
+  .card-container {
+    width: 80%;
+  }
+  .grid-container{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .app-container{
+    padding: 20px;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .heading-1 {
+    font-size: 50px;
+  }
+  .starred-btn{
+    width: 140px;
+    border-radius: 50px;
+    height: 50px;
+  }
+  .appointment{
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width:992px){
+
+  .grid-container{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
